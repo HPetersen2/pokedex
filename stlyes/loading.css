@@ -1,0 +1,20 @@
+.loading {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 160px);
+}
+.rotating-logo {
+    width: 150px;
+    height: 150px;
+    animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0deg); /* Anfangsposition: 0 Grad */
+    }
+    to {
+      transform: rotate(360deg); /* Endposition: 360 Grad */
+    }
+  }

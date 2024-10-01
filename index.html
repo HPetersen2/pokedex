@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <script src="./scripts/template.js"></script>
+    <script src="./scripts/script.js"></script>
+    <link rel="stylesheet" href="./stlyes/pokemon.css">
+    <link rel="stylesheet" href="./stlyes/standard.css">
+    <link rel="stylesheet" href="./stlyes/style.css">
+    <link rel="stylesheet" href="./stlyes/loading.css">
+    <title>Pokedex</title>
+</head>
+<body onload="init()">
+    <div class="content" id="content">
+        <header onclick="closeOverlay()">
+            <div class="max-width d_flex_sb height-80 m-auto">
+                <div class="header-content d_flex_c_c">
+                    <img class="m-left-24" src="./assets/img/pokemon.png" alt="pokemon-icon">
+                    <h1 class="m-left-24">Pokedex</h1>
+                </div>
+                <div class="search-bar d_flex_c_c m-48">
+                    <input type="text" onkeyup="searchPokemon()" id="search" placeholder="Search ...">
+                    <button onclick="clearDisplay()">Zurücksetzen</button>
+                </div>
+            </div>
+        </header>
+        <main id="main">
+            <div class="loading" id="loading">
+                <img src="./assets/img/loading_spinner.png" alt="load" class="rotating-logo">
+                <p>Loading ...</p>
+            </div>
+            <div class="pokemon-container max-width" id="pokemon-cards">
+
+            </div>
+            <div class="load-more-pokemon">
+                <button onclick="loadMorePokemon()" id="load-more">Load more Pokemon</button>
+            </div>
+        </main>
+        <footer onclick="closeOverlay()">
+            <div>
+                <img class="footer-logo" src="./assets/img/logo.png" alt="logo">
+            </div>
+            <div>
+                <p class="m-top-12">&#169;2024</p>
+            </div>
+        </footer>
+    </div>
+    <div id="pokemon-overlay">
+
+    </div>
+</body>
+</html>
